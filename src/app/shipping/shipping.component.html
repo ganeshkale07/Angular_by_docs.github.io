@@ -1,0 +1,8 @@
+<div class="container" *ngIf="shippingData.length > 0">
+  <div class="card" style="width: 50rem" *ngFor="let data of shippingData">
+    <div class="card-body">
+      <h5 class="card-title">{{ data.type }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ data.price | currency }}</h6>
+    </div>
+  </div>
+</div>
