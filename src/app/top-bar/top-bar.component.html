@@ -8,6 +8,11 @@
         [routerLink]="['/cart']"
       >
         Checkout
+        <span
+          class="position-absolute top-2 start-100 translate-middle badge rounded-pill bg-light text-dark border border-2"
+        >
+          {{ ItemsInCart.length }}
+        </span>
       </button>
     </div>
   </div>

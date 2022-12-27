@@ -1,13 +1,13 @@
 <div class="container" *ngIf="products.length > 0">
   <h2>My Cart</h2>
-  <div class="card my-3" style="width: 50rem" *ngFor="let product of products">
+  <div class="card my-4" style="width: 50rem" *ngFor="let product of products">
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
       <h6 class="card-subtitle mb-2 text-muted"></h6>
     </div>
   </div>
 
-  <a href="" class="my-3" [routerLink]="['/shipping']"
+  <a href="" class="py-3" [routerLink]="['/shipping']"
     >Know about shipping charges</a
   >
 </div>

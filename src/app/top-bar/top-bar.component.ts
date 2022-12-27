@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
+import { Product } from '../shared/product';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
-
-  constructor() { }
+  ItemsInCart : Product[] = [];
+  constructor(private cartService : CartService) { }
 
   ngOnInit(): void {
+      this.ItemsInCart = this.cartService.getCartItem();
   }
 
 }
